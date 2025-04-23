@@ -6,9 +6,6 @@ public class Inbox {
 
     public ArrayList<Mail> mailList;
 
-
-
-
     public Inbox(){
         mailList = new ArrayList<>();
     }
@@ -18,10 +15,13 @@ public class Inbox {
     }
 
 
-
     public void printAllMailHeader(){
+        String seen = "not opened";
         for (Mail x : mailList) {
-            System.out.println(String.format("%s | %s | %s | %s ", x.getRead(), x.getSubject(), x.getSenderAddress(), x.getDaytime()));
+            if(x.getRead()){
+                seen = "opened";
+            }
+            System.out.println(String.format("%s | %s | %s | %s ", seen, x.getSubject(), x.getSenderAddress(), x.getDatetime()));
         }
     }
 

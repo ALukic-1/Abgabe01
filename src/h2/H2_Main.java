@@ -47,15 +47,17 @@ public class H2_Main {
         inbox.addMail(mail3);
         inbox.addMail(mail4);
 
-        System.out.println(inbox.countUnread());
+        System.out.println("Unread amount: "+inbox.countUnread());
 
 
         //lesen von Mail
         inbox.open(1);
-        System.out.println(inbox.countUnread());
+        System.out.println("Unread amount: "+inbox.countUnread());
 
         //test ob IndexControl funktioniert
         inbox.open( -3);
         System.out.println(inbox.countUnread());
+
+        inbox.printAllMailHeader();
     }
 }

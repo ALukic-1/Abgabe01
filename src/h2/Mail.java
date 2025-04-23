@@ -7,7 +7,7 @@ public class Mail {
         private String senderAddress;
         private String subject;
         private String message;
-        private LocalDateTime daytime;
+        private LocalDateTime datetime;
         private boolean read = false;
 
 
@@ -19,7 +19,7 @@ public class Mail {
 
     //print Mail
     public String getInfo(){
-        return String.format("%s from %s on %s : %s", subject, senderAddress, daytime, message);
+        return String.format("%s from %s on %s : %s", subject, senderAddress, datetime, message);
     }
 
 
@@ -27,11 +27,11 @@ public class Mail {
 
 
     //Konstruktor
-    public Mail (String senderAddress, String subject, String message, LocalDateTime daytime) {
+    public Mail (String senderAddress, String subject, String message, LocalDateTime datetime) {
         this.senderAddress = senderAddress;
         this.subject = subject;
         this.message = message;
-        this.daytime =  LocalDateTime.now();
+        this.datetime =  datetime.now();
         this.read = false;
     }
 
@@ -48,8 +48,8 @@ public class Mail {
     public void setMessage(String message){
         this.message = message;
     }
-    public void setDaytime(LocalDateTime daytime){
-        this.daytime = daytime;
+    public void setDatetime(LocalDateTime datetime){
+        this.datetime = datetime;
     }
 
     public void setRead(boolean read){
@@ -68,8 +68,8 @@ public class Mail {
     public String getMessage(){
         return message;
     }
-    public LocalDateTime getDaytime(){
-        return daytime;
+    public LocalDateTime getDatetime(){
+        return datetime;
     }
     public boolean getRead(){
         return read;
