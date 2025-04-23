@@ -10,12 +10,10 @@ public class Publication {
         return info;
     }
 
-
-
-
-
-
-
+    public Publication(int year, String title) {
+        this.year = year;
+        this.title = title;
+    }
 
     //Getter
     public String getTitle() {

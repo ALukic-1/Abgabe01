@@ -54,8 +54,8 @@ public class H2_Main {
         inbox.open(1);
         System.out.println(inbox.countUnread());
 
-        //test ob outofbound funktioniert
-        inbox.open(4);
+        //test ob IndexControl funktioniert
+        inbox.open( -3);
         System.out.println(inbox.countUnread());
     }
 }

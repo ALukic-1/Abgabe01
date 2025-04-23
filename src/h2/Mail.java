@@ -16,6 +16,8 @@ public class Mail {
         setRead(true);
     }
 
+
+    //print Mail
     public String getInfo(){
         return String.format("%s from %s on %s : %s", subject, senderAddress, daytime, message);
     }
@@ -29,7 +31,7 @@ public class Mail {
         this.senderAddress = senderAddress;
         this.subject = subject;
         this.message = message;
-        this.daytime = daytime;
+        this.daytime =  LocalDateTime.now();
         this.read = false;
     }
 
@@ -69,7 +71,7 @@ public class Mail {
     public LocalDateTime getDaytime(){
         return daytime;
     }
-    public Boolean getRead(){
+    public boolean getRead(){
         return read;
     }
 }

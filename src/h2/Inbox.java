@@ -19,7 +19,7 @@ public class Inbox {
 
 
 
-    public void getMailHeader(){
+    public void printAllMailHeader(){
         for (Mail x : mailList) {
             System.out.println(String.format("%s | %s | %s | %s ", x.getRead(), x.getSubject(), x.getSenderAddress(), x.getDaytime()));
         }
@@ -27,7 +27,7 @@ public class Inbox {
 
 
     public void open(int index){
-        if (index >= mailList.size()){
+        if (index >= mailList.size() || index < 0){
             System.out.println("Email does not exist");
         } else{
         System.out.println(mailList.get(index).getInfo());
