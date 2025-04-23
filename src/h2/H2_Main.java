@@ -37,8 +37,8 @@ public class H2_Main {
                 LocalDateTime.now()
         );
 
-        mail1.seen();
-        mail3.seen();
+//        mail1.seen();
+//        mail3.seen();
 
         Inbox inbox = new Inbox();
 
@@ -51,12 +51,12 @@ public class H2_Main {
 
 
         //lesen von Mail
-        inbox.open(1);
-        System.out.println("Unread amount: "+inbox.countUnread());
+        inbox.open(3);
+      //  System.out.println("Unread amount: "+inbox.countUnread());
 
         //test ob IndexControl funktioniert
-        inbox.open( -3);
-        System.out.println(inbox.countUnread());
+     //   inbox.open( -3);
+      //  System.out.println(inbox.countUnread());
 
         inbox.printAllMailHeader();
     }

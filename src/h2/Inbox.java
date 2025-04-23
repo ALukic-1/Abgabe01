@@ -16,8 +16,8 @@ public class Inbox {
 
 
     public void printAllMailHeader(){
-        String seen = "not opened";
         for (Mail x : mailList) {
+            String seen = "not opened";
             if(x.getRead()){
                 seen = "opened";
             }
@@ -29,9 +29,10 @@ public class Inbox {
     public void open(int index){
         if (index >= mailList.size() || index < 0){
             System.out.println("Email does not exist");
-        } else{
+        } else {
         System.out.println(mailList.get(index).getInfo());
-        mailList.get(index).seen();}
+        mailList.get(index).seen();
+        }
     }
 
     public int countUnread(){

@@ -13,7 +13,8 @@ public class Mail {
 
 
     public void seen(){
-        setRead(true);
+      //  setRead(true);
+        read=true;
     }
 
 
@@ -21,8 +22,6 @@ public class Mail {
     public String getInfo(){
         return String.format("%s from %s on %s : %s", subject, senderAddress, datetime, message);
     }
-
-
 
 
 
